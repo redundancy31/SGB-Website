@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 48 33% 98%;
+  --foreground: 214 30% 17%;
+  --primary: 214 53% 11%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 212 29% 36%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 175 45% 34%;
+  --accent-foreground: 0 0% 100%;
+  --muted: 220 15% 94%;
+  --muted-foreground: 217 19% 38%;
+  --card: 0 0% 100%;
+  --card-foreground: 214 30% 17%;
+  --border: 214 15% 85%;
+  --input: 214 15% 87%;
+  --ring: 175 45% 34%;
+  --font-sans: "Manrope";
+}
+
+* {
+  @apply border-border;
+}
+
+html,
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(65, 90, 119, 0.08), transparent 32%),
+    radial-gradient(circle at 88% 12%, rgba(47, 127, 121, 0.1), transparent 34%),
+    #f7f7f3;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8;
+}
+
+.section-space {
+  @apply py-16 md:py-20;
+}
+
+.section-alt {
+  @apply bg-white;
+}
+
+.section-subtle {
+  background-color: rgb(248 250 252 / 0.8);
+}
+
+.industrial-line {
+  background: linear-gradient(90deg, rgba(13, 27, 42, 0.28), rgba(65, 90, 119, 0.1));
+  height: 1px;
+  width: 100%;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
