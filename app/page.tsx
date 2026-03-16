@@ -7,7 +7,6 @@ import { companyProfile } from "@/data/company-profile";
 import { Button } from "@/components/ui/button";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { SectionHeading } from "@/components/sections/SectionHeading";
-import { TrustBar } from "@/components/sections/TrustBar";
 import { StatsStrip } from "@/components/sections/StatsStrip";
 import { ImageGallery } from "@/components/sections/ImageGallery";
 
@@ -88,13 +87,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <section className="section-subtle py-10">
-        <div className="container-shell">
-          <TrustBar items={company.trustHighlights} />
-        </div>
-      </section>
-
       <section className="section-space section-alt">
         <div className="container-shell grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>

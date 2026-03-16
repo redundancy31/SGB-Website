@@ -128,7 +128,7 @@ export const companyProfile = {
       "SGB Engineering & Trading delivers procurement, installation, rectification works, and project management as both a main contractor and subcontractor.",
     highlights: [
       "Established in 2012",
-      "Main contractor and subcontractor execution model",
+      "Procurement, installation, and rectification expertise",
       "Electrical, communication, and security system focus",
       "Repeat business and referral-driven relationships"
     ]
@@ -144,9 +144,9 @@ export const companyProfile = {
     trustHighlights: ["BCA registered", "ISO 9001", "ISO 45001", "bizSAFE STAR"],
     stats: [
       { label: "Established", value: "2012" },
-      { label: "Named Clients", value: "5" },
-      { label: "Service Scopes", value: "14" },
-      { label: "Installers", value: "16" }
+      { label: "Project References", value: "28+" },
+      { label: "Service Scopes", value: "15+" },
+      { label: "Specialist Roles", value: "16+" }
     ]
   },
   clients: [
