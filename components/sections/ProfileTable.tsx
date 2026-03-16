@@ -22,15 +22,23 @@ export function ProfileTable<T extends Record<string, string>>({ columns, rows }
           </tr>
         </thead>
         <tbody>
-          {rows.map((row, rowIndex) => (
-            <tr key={rowIndex} className="border-b border-slate-200 last:border-b-0">
-              {columns.map((column) => (
-                <td key={String(column.key)} className="p-3 text-muted-foreground">
-                  {row[column.key]}
-                </td>
-              ))}
+          {rows.length > 0 ? (
+            rows.map((row, rowIndex) => (
+              <tr key={rowIndex} className="border-b border-slate-200 last:border-b-0">
+                {columns.map((column) => (
+                  <td key={String(column.key)} className="p-3 text-muted-foreground">
+                    {row[column.key]}
+                  </td>
+                ))}
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan={columns.length} className="p-3 text-muted-foreground">
+                No data is currently available.
+              </td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>

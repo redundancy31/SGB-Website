@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { MobileNav } from "@/components/MobileNav";
@@ -9,7 +10,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-slate-200/90 bg-white/95 backdrop-blur">
       <div className="container-shell flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" aria-label="SGB Engineering and Trading home">
-          <img src="/sgb-logo.png" alt="SGB Engineering logo" className="h-10 w-10 rounded-md object-contain" />
+          <Image src="/sgb-logo.png" alt="SGB Engineering logo" width={40} height={40} className="h-10 w-10 rounded-md object-contain" />
           <div>
             <p className="text-sm font-semibold leading-tight text-primary">{company.name}</p>
             <p className="text-[11px] text-muted-foreground">Company Profile & Capability Overview</p>

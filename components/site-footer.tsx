@@ -43,7 +43,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-8 flex flex-wrap items-center justify-between gap-2 border-t border-slate-200 pt-6 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
+          <p>(c) {new Date().getFullYear()} {company.name}. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="hover:text-primary">
               Privacy Policy

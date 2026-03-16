@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     template: `%s | ${company.name}`
   },
   description: companyProfile.seo.homeDescription,
+  applicationName: company.shortName,
   openGraph: {
     title: companyProfile.seo.homeTitle,
     description: companyProfile.seo.homeDescription,
@@ -37,13 +38,16 @@ export const metadata: Metadata = {
     title: companyProfile.seo.homeTitle,
     description: companyProfile.seo.homeDescription,
     images: [company.heroImage]
+  },
+  alternates: {
+    canonical: "/"
   }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en" className={manrope.variable}>
-      <body>
+      <body className="min-h-screen bg-background text-foreground antialiased">
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

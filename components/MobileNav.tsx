@@ -17,6 +17,28 @@ export function MobileNav() {
     setOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!open) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [open]);
+
   return (
     <>
       <Button
@@ -43,6 +65,8 @@ export function MobileNav() {
           "fixed right-0 top-0 z-[60] h-full w-[84%] max-w-sm bg-white p-6 shadow-soft transition-transform lg:hidden",
           open ? "translate-x-0" : "translate-x-full"
         )}
+        role="dialog"
+        aria-modal="true"
         aria-hidden={!open}
       >
         <div className="flex items-center justify-between border-b border-border pb-4">

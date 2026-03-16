@@ -106,7 +106,7 @@ export const companyProfile = {
   company: {
     name: "SGB ENGINEERING & TRADING PTE. LTD.",
     shortName: "SGB Engineering & Trading",
-    tagline: "Excellence in Engineering & Trading Solutions",
+    tagline: "Reliable Delivery for Electrical, Communication & Security Systems",
     establishedYear: "2012",
     location: "Singapore",
     contactPerson: "Mohammad Mozammal Hoque",
@@ -122,7 +122,7 @@ export const companyProfile = {
     }
   },
   hero: {
-    eyebrow: "Singapore Engineering & Trading",
+    eyebrow: "SGB Engineering & Trading Pte. Ltd.",
     title: "Electrical, communication, and security systems execution for small to medium-sized projects",
     summary:
       "SGB Engineering & Trading delivers procurement, installation, rectification works, and project management as both a main contractor and subcontractor.",
