@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbopack",
+    "dev:reset": "powershell -ExecutionPolicy Bypass -Command \"if (Test-Path '.next-dev') { Remove-Item '.next-dev' -Recurse -Force }; if (Test-Path '.next') { Remove-Item '.next' -Recurse -Force }; npm run dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

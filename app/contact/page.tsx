@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Mail, MapPin, Phone, User2 } from "lucide-react";
 
 import { company } from "@/data/company";
-import { companyProfile } from "@/data/company-profile";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
@@ -52,10 +51,10 @@ export default function ContactPage() {
               <p>{company.operatingHours}</p>
             </div>
             <ImagePlaceholder
-              src={companyProfile.hero.visuals[0]?.src ?? companyProfile.company.coverImage.outputPath}
-              alt={company.tagline}
-              className="h-64 w-full border border-slate-200 bg-slate-50 object-cover"
-              label="Current project visual"
+              src="/sgb-logo.png"
+              alt={`${company.shortName} logo`}
+              className="h-64 w-full border border-slate-200 bg-slate-50 object-contain p-6"
+              label="SGB logo"
             />
           </aside>
 

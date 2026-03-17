@@ -25,6 +25,16 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+Development now uses `.next-dev` while production builds use `.next`, so dev and build artifacts do not collide.
+
+If the dev server shows missing manifest files or repeated `ENOENT` errors, stop it and run:
+
+```bash
+npm run dev:reset
+```
+
+`npm run dev:turbo` remains available if you explicitly want Turbopack.
+
 ## Build
 
 ```bash
