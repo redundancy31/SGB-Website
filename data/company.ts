@@ -13,23 +13,23 @@ export const company = {
   consultationEmail: companyProfile.company.email,
   operatingHours: companyProfile.company.operatingHours,
   responseTime: companyProfile.company.responseTime,
-  heroImage: companyProfile.company.coverImage?.outputPath ?? "",
+  heroImage: companyProfile.hero.visuals[0]?.src ?? companyProfile.company.coverImage.outputPath,
   contactPerson: companyProfile.company.contactPerson,
   contactRole: companyProfile.company.contactRole,
   mission:
-    "Deliver reliable engineering and trading support for electrical, communication, and security systems through disciplined execution and long-term client relationships.",
+    "Deliver reliable procurement, installation, termination and rectification support for electrical, communication and security systems through disciplined execution.",
   vision:
-    "Be a trusted Singapore engineering partner for clients seeking dependable project execution across installation, rectification, and technical coordination scopes.",
+    "Be the trusted Singapore execution partner clients turn to when project teams need visible capability, safe delivery and clean closeout standards.",
   values: [
     "Quality and reliability",
-    "Long-term client relationships",
+    "Visible site readiness",
     "Practical project execution",
-    "Responsive contractor support"
+    "Long-term client relationships"
   ],
   trustHighlights: [
     `Established in ${companyProfile.company.establishedYear}`,
-    "Electrical, communication, and security systems focus",
-    "Main contractor and subcontractor experience",
+    "Electrical, communication and security systems focus",
+    "Current and upcoming rail-related project references",
     "ISO 9001, ISO 45001, bizSAFE STAR, and BCA highlighted in profile"
   ],
   proofItems: companyProfile.overview.stats,

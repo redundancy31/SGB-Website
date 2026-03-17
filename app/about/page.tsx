@@ -15,13 +15,13 @@ export default function AboutPage() {
   return (
     <>
       <section className="section-space">
-        <div className="container-shell grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-center">
+        <div className="container-shell grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-start">
           <div>
-          <SectionHeading
-            eyebrow="About"
-            title={company.name}
-            description="Company overview, client references, and manpower capability for SGB Engineering & Trading."
-          />
+            <SectionHeading
+              eyebrow="About"
+              title={company.name}
+              description="The updated profile now reads less like a company brochure and more like a buyer review pack: who SGB is, who engages them, and how teams are deployed on site."
+            />
             <div className="mt-5 space-y-2 text-sm text-muted-foreground">
               <p>
                 <span className="font-medium text-primary">Established:</span> {company.establishedYear}
@@ -30,7 +30,7 @@ export default function AboutPage() {
                 <span className="font-medium text-primary">Location:</span> {company.location}
               </p>
               <p>
-                <span className="font-medium text-primary">Primary Contact in Profile:</span> {company.contactPerson}, {company.contactRole}
+                <span className="font-medium text-primary">Primary Contact:</span> {company.contactPerson}, {company.contactRole}
               </p>
             </div>
             <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground">
@@ -39,15 +39,28 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-          <div className="rounded-lg border border-slate-200 bg-white p-6">
-            <h2 className="text-xl font-semibold text-primary">Existing Clients Listed in the Profile</h2>
-            <ul className="mt-4 grid gap-3 text-sm text-muted-foreground">
-              {companyProfile.clients.map((client) => (
-                <li key={client} className="rounded-md border border-slate-200 bg-slate-50 px-3 py-2">
-                  {client}
-                </li>
-              ))}
-            </ul>
+
+          <div className="space-y-5">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+              <h2 className="text-xl font-semibold text-primary">Existing Clients Listed in the Updated Deck</h2>
+              <ul className="mt-4 grid gap-3 text-sm text-muted-foreground">
+                {companyProfile.clients.map((client) => (
+                  <li key={client} className="rounded-md border border-slate-200 bg-slate-50 px-3 py-3">
+                    {client}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+              <h2 className="text-xl font-semibold text-primary">Trust Stack</h2>
+              <ul className="mt-4 grid gap-3 text-sm text-muted-foreground">
+                {companyProfile.overview.trustHighlights.map((item) => (
+                  <li key={item} className="rounded-md border border-slate-200 bg-slate-50 px-3 py-3">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -55,9 +68,9 @@ export default function AboutPage() {
       <section className="section-space section-subtle">
         <div className="container-shell">
           <SectionHeading
-            eyebrow="Organization & Team"
-            title="Organization Charts and Key Staff Visuals"
-            description="Organization and team visuals support the company profile with an operational view of structure and field capability."
+            eyebrow="Team Deployment"
+            title="Updated organization and project team charts"
+            description="The new slides replace the older key-staff style visuals with clearer organization and project-specific deployment charts."
           />
           <div className="mt-10">
             <ImageGallery items={companyProfile.manpower.visuals} imageClassName="h-72 w-full rounded-none object-contain bg-slate-50" />
@@ -69,8 +82,8 @@ export default function AboutPage() {
         <div className="container-shell">
           <SectionHeading
             eyebrow="Manpower"
-            title="On-Site Manpower Capabilities"
-            description="The following manpower counts are transcribed directly from the company profile tables."
+            title="On-site manpower capabilities"
+            description="The manpower profile remains positioned as execution proof: project management, safety, supervision, LEW support and installer bench strength."
           />
           <div className="mt-8">
             <ProfileTable
@@ -89,8 +102,8 @@ export default function AboutPage() {
           <div>
             <SectionHeading
               eyebrow="Skilled Personnel"
-              title="Certified and Operational Support Roles"
-              description="These roles reinforce specialist site-readiness and operational support capacity."
+              title="Certified and operational support roles"
+              description="These roles reinforce site-readiness for lifting, scaffolding, rescue, first aid and access equipment operations."
             />
             <div className="mt-8">
               <ProfileTable
@@ -105,8 +118,8 @@ export default function AboutPage() {
           <div>
             <SectionHeading
               eyebrow="Additional Resources"
-              title="Additional Manpower Resources"
-              description="Supplementary manpower resources available on request."
+              title="Additional manpower resources"
+              description="Supplementary skilled manpower can be activated on request to support project peaks and accelerated deployment needs."
             />
             <div className="mt-8">
               <ProfileTable

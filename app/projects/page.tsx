@@ -2,12 +2,46 @@ import type { Metadata } from "next";
 
 import { companyProfile } from "@/data/company-profile";
 import { SectionHeading } from "@/components/sections/SectionHeading";
-import { ProfileTable } from "@/components/sections/ProfileTable";
+import { ImageGallery } from "@/components/sections/ImageGallery";
 
 export const metadata: Metadata = {
   title: "Projects",
   description: companyProfile.seo.projectsDescription
 };
+
+function ProjectCard({
+  name,
+  description,
+  period,
+  client,
+  poNumber
+}: {
+  name: string;
+  description: string;
+  period: string;
+  client: string;
+  poNumber?: string;
+}) {
+  return (
+    <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
+      <h3 className="text-base font-semibold text-primary">{name}</h3>
+      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{description}</p>
+      <div className="mt-4 grid gap-3 text-xs text-muted-foreground sm:grid-cols-2">
+        <div className="rounded-md border border-slate-200 bg-slate-50 px-3 py-2">
+          <p className="font-medium text-primary">Period</p>
+          <p className="mt-1">{period}</p>
+        </div>
+        <div className="rounded-md border border-slate-200 bg-slate-50 px-3 py-2">
+          <p className="font-medium text-primary">Client</p>
+          <p className="mt-1">{client}</p>
+        </div>
+      </div>
+      {poNumber ? (
+        <p className="mt-4 text-xs font-medium uppercase tracking-[0.14em] text-secondary">PO: {poNumber}</p>
+      ) : null}
+    </article>
+  );
+}
 
 export default function ProjectsPage() {
   return (
@@ -16,40 +50,72 @@ export default function ProjectsPage() {
         <div className="container-shell">
           <SectionHeading
             eyebrow="Projects"
-            title="Ongoing and Completed Projects"
-            description="Selected project references are organized below by current status to present delivery history clearly and professionally."
+            title="Project portfolio presented as pipeline, proof and track record"
+            description="The updated slides support a clearer project story: ongoing scopes, upcoming opportunities, recently completed work and archive references that show delivery continuity."
           />
+          <div className="mt-10">
+            <ImageGallery items={companyProfile.projectReferences.visuals} imageClassName="h-72 w-full rounded-none object-cover bg-slate-50" />
+          </div>
         </div>
       </section>
 
       <section className="section-space section-subtle pt-0">
         <div className="container-shell">
-          <SectionHeading eyebrow="Ongoing" title="Current Projects" description="Representative ongoing references." />
-          <div className="mt-8">
-            <ProfileTable
-              columns={[
-                { key: "name", label: "Project" },
-                { key: "period", label: "Period" },
-                { key: "client", label: "Client" }
-              ]}
-              rows={companyProfile.projectReferences.ongoing}
-            />
+          <SectionHeading eyebrow="Ongoing" title="Current delivery scopes" description="Active references drawn from the updated profile." />
+          <div className="mt-8 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+            {companyProfile.projectReferences.ongoing.map((project) => (
+              <ProjectCard key={project.name} {...project} />
+            ))}
           </div>
         </div>
       </section>
 
       <section className="section-space section-alt">
         <div className="container-shell">
-          <SectionHeading eyebrow="Completed" title="Completed Projects" description="Selected completed project references." />
-          <div className="mt-8">
-            <ProfileTable
-              columns={[
-                { key: "name", label: "Project" },
-                { key: "period", label: "Period" },
-                { key: "client", label: "Client" }
-              ]}
-              rows={companyProfile.projectReferences.completed}
-            />
+          <SectionHeading
+            eyebrow="Upcoming"
+            title="Pipeline opportunities"
+            description="Forthcoming scopes included in the updated deck to show continuity in demand and sector relevance."
+          />
+          <div className="mt-8 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+            {companyProfile.projectReferences.upcoming.map((project) => (
+              <ProjectCard key={project.name} {...project} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space section-subtle">
+        <div className="container-shell">
+          <SectionHeading
+            eyebrow="Recently Completed"
+            title="Recent delivery proof"
+            description="These references reinforce current execution capability rather than relying only on older legacy work."
+          />
+          <div className="mt-8 grid gap-5 lg:grid-cols-2">
+            {companyProfile.projectReferences.recentlyCompleted.map((project) => (
+              <ProjectCard key={project.name} {...project} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space section-alt">
+        <div className="container-shell">
+          <SectionHeading
+            eyebrow="Archive References"
+            title="Earlier project history"
+            description="Older references are still retained to show continuity of work across rail, VSS, PA, communications and associated systems."
+          />
+          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {companyProfile.projectReferences.archiveCompleted.map((project) => (
+              <article key={project.name} className="rounded-xl border border-slate-200 bg-white p-5 shadow-soft">
+                <h3 className="text-base font-semibold text-primary">{project.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+                <p className="mt-4 text-xs font-medium text-secondary">{project.period}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{project.client}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

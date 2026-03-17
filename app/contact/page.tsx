@@ -18,8 +18,8 @@ export default function ContactPage() {
       <div className="container-shell">
         <SectionHeading
           eyebrow="Contact"
-          title="Request Company Profile and Capability Information"
-          description="Use the form to request the latest company profile, supporting certification files, or a discussion on project fit."
+          title="Request capability details, supporting files or a project discussion"
+          description="Use the form to request the latest company profile, supporting certification files, or a discussion on scope fit and delivery capability."
         />
         <div className="mt-8 grid gap-7 lg:grid-cols-[0.95fr_1.05fr]">
           <aside className="space-y-4 rounded-lg border border-slate-200 bg-white p-6">
@@ -52,10 +52,10 @@ export default function ContactPage() {
               <p>{company.operatingHours}</p>
             </div>
             <ImagePlaceholder
-              src={companyProfile.company.coverImage?.outputPath ?? ""}
+              src={companyProfile.hero.visuals[0]?.src ?? companyProfile.company.coverImage.outputPath}
               alt={company.tagline}
-              className="h-64 w-full border border-slate-200 bg-slate-50 object-contain"
-              label="Company profile cover"
+              className="h-64 w-full border border-slate-200 bg-slate-50 object-cover"
+              label="Current project visual"
             />
           </aside>
 

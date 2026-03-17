@@ -17,7 +17,7 @@ export default function SafetyQualityPage() {
           <div>
             <SectionHeading
               eyebrow="Safety & Quality"
-              title="Quality Check Procedure and Testing Workflow"
+              title="Quality control and testing are part of the delivery pitch"
               description={companyProfile.quality.intro}
             />
             <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
@@ -28,11 +28,11 @@ export default function SafetyQualityPage() {
               ))}
             </ul>
           </div>
-          <div className="rounded-lg border border-slate-200 bg-white p-6">
-            <h2 className="text-lg font-semibold text-primary">Compliance Context</h2>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Quality and testing are presented together with the company&apos;s certification stack of ISO 9001, ISO 45001, bizSAFE STAR, and
-              BCA certification.
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h2 className="text-lg font-semibold text-primary">Why this matters to buyers</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              The updated profile makes quality visible in practical terms: incoming material checks, documented testing procedure, named equipment
+              and real field-installation evidence. That improves trust for both tender reviews and direct client evaluation.
             </p>
           </div>
         </div>
@@ -42,8 +42,8 @@ export default function SafetyQualityPage() {
         <div className="container-shell">
           <SectionHeading
             eyebrow="Procedure Visuals"
-            title="Quality and Testing Workflow Visuals"
-            description="Visual references for quality checks and testing workflow."
+            title="Quality check and testing workflow"
+            description="Updated visual references for procurement checks, verification workflow and testing procedure."
           />
           <div className="mt-10">
             <ImageGallery items={companyProfile.quality.processVisuals} imageClassName="h-80 w-full rounded-none object-contain bg-slate-50" />
@@ -54,12 +54,12 @@ export default function SafetyQualityPage() {
       <section className="section-space section-alt">
         <div className="container-shell">
           <SectionHeading
-            eyebrow="Equipment Records"
-            title="Termination and Testing Equipment"
-            description="Equipment records supporting technical capability and testing readiness."
+            eyebrow="Equipment Readiness"
+            title="Termination and testing equipment"
+            description="Equipment records and testing visuals positioned as proof that SGB can verify, document and hand over work cleanly."
           />
           <div className="mt-10">
-            <ImageGallery items={companyProfile.quality.equipmentVisuals} imageClassName="h-72 w-full rounded-none object-contain bg-slate-50" />
+            <ImageGallery items={companyProfile.quality.equipmentVisuals} imageClassName="h-72 w-full rounded-none object-cover bg-slate-50" />
           </div>
         </div>
       </section>
