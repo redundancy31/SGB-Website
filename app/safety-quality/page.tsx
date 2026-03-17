@@ -31,7 +31,7 @@ export default function SafetyQualityPage() {
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
             <h2 className="text-lg font-semibold text-primary">Why this matters to buyers</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              The updated profile makes quality visible in practical terms: incoming material checks, documented testing procedure, named equipment
+              The profile makes quality visible in practical terms: incoming material checks, documented testing procedure, named equipment
               and real field-installation evidence. That improves trust for both tender reviews and direct client evaluation.
             </p>
           </div>

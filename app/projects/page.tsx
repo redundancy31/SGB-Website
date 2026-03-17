@@ -51,7 +51,7 @@ export default function ProjectsPage() {
           <SectionHeading
             eyebrow="Projects"
             title="Project portfolio presented as pipeline, proof and track record"
-            description="The updated slides support a clearer project story: ongoing scopes, upcoming opportunities, recently completed work and archive references that show delivery continuity."
+            description="The project portfolio is structured around ongoing scopes, upcoming opportunities, recently completed work and archive references that show delivery continuity."
           />
           <div className="mt-10">
             <ImageGallery items={companyProfile.projectReferences.visuals} imageClassName="h-72 w-full rounded-none object-cover bg-slate-50" />
@@ -61,7 +61,7 @@ export default function ProjectsPage() {
 
       <section className="section-space section-subtle pt-0">
         <div className="container-shell">
-          <SectionHeading eyebrow="Ongoing" title="Current delivery scopes" description="Active references drawn from the updated profile." />
+          <SectionHeading eyebrow="Ongoing" title="Current delivery scopes" description="Active references that show live delivery capability." />
           <div className="mt-8 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
             {companyProfile.projectReferences.ongoing.map((project) => (
               <ProjectCard key={project.name} {...project} />
@@ -75,7 +75,7 @@ export default function ProjectsPage() {
           <SectionHeading
             eyebrow="Upcoming"
             title="Pipeline opportunities"
-            description="Forthcoming scopes included in the updated deck to show continuity in demand and sector relevance."
+            description="Forthcoming scopes that show continuity in demand and sector relevance."
           />
           <div className="mt-8 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
             {companyProfile.projectReferences.upcoming.map((project) => (

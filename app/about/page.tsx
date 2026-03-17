@@ -20,7 +20,7 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="About"
               title={company.name}
-              description="The updated profile now reads less like a company brochure and more like a buyer review pack: who SGB is, who engages them, and how teams are deployed on site."
+              description="The company profile reads less like a brochure and more like a buyer review pack: who SGB is, who engages them, and how teams are deployed on site."
             />
             <div className="mt-5 space-y-2 text-sm text-muted-foreground">
               <p>
@@ -69,8 +69,8 @@ export default function AboutPage() {
         <div className="container-shell">
           <SectionHeading
             eyebrow="Team Deployment"
-            title="Updated organization and project team charts"
-            description="The new slides replace the older key-staff style visuals with clearer organization and project-specific deployment charts."
+            title="Organization and project team charts"
+            description="These visuals show overall structure and project-specific deployment with clearer reporting lines and field roles."
           />
           <div className="mt-10">
             <ImageGallery items={companyProfile.manpower.visuals} imageClassName="h-72 w-full rounded-none object-contain bg-slate-50" />

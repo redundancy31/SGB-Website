@@ -18,8 +18,8 @@ export default function ServicesPage() {
         <div className="container-shell">
           <SectionHeading
             eyebrow="Services"
-            title="Capability areas shown in the updated profile"
-            description="The new deck expands the services story beyond earlier installation references to include metal works, equipment device installation and labelled closeout scopes."
+            title="Capability areas"
+            description="The service story extends beyond installation references to include metal works, equipment device installation and labelled closeout scopes."
           />
           <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">
             These capabilities are presented as buyer-facing proof of range. The list is still non-exhaustive and should be treated as a current capability snapshot rather than a hard limit.

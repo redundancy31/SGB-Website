@@ -106,7 +106,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Why SGB"
                 title="A client-facing pitch built around trust, capability and visible execution"
-                description="The updated slides move the story from a static brochure toward live capability proof: who is deployed, what is being delivered now, and how work quality is controlled."
+                description="The site is structured around live capability proof: who is deployed, what is being delivered now, and how work quality is controlled."
               />
               <div className="mt-8 grid gap-4 md:grid-cols-2">
                 {companyProfile.overview.pillars.map((pillar) => (
@@ -120,7 +120,7 @@ export default function HomePage() {
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
               <h3 className="text-lg font-semibold text-primary">Existing Clients</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                The updated profile highlights an active client roster centered on transport, infrastructure and systems execution environments.
+                The profile highlights an active client roster centered on transport, infrastructure and systems execution environments.
               </p>
               <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
                 {companyProfile.clients.map((client) => (
@@ -225,7 +225,7 @@ export default function HomePage() {
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
             <h2 className="text-2xl font-bold text-primary">Team deployment is visible, not abstract</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              The updated profile now shows overall organization and project-specific team charts so buyers can see the safety, supervision and installer structure behind the promise.
+              The company profile shows overall organization and project-specific team charts so buyers can see the safety, supervision and installer structure behind the promise.
             </p>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

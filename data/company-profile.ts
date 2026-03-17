@@ -237,7 +237,7 @@ export const companyProfile = {
     eyebrow: "Singapore engineering delivery partner",
     title: "Procurement, installation, rectification works, and project execution for transport and infrastructure systems",
     summary:
-      "The updated profile positions SGB as a dependable subcontractor for small to medium-sized projects, backed by real team deployment charts, current pipeline references, and documented QA discipline.",
+      "SGB is positioned as a dependable subcontractor for small to medium-sized projects, backed by real team deployment charts, current pipeline references, and documented QA discipline.",
     highlights: [
       "Established in 2012 with repeat-business relationships",
       "Electrical, communication and security systems focus",
@@ -276,7 +276,7 @@ export const companyProfile = {
       { label: "Established", value: "2012" },
       { label: "Service Scopes", value: "17" },
       { label: "Active + Upcoming References", value: "6" },
-      { label: "Existing Clients in Deck", value: "4" }
+      { label: "Existing Clients", value: "4" }
     ],
     pillars: [
       {
@@ -285,7 +285,7 @@ export const companyProfile = {
       },
       {
         title: "Deployment Visibility",
-        description: "Updated team charts make site structure, reporting lines, safety roles, and installer capacity visible to potential clients."
+        description: "Team charts make site structure, reporting lines, safety roles, and installer capacity visible to potential clients."
       },
       {
         title: "Technical Breadth",
@@ -307,7 +307,7 @@ export const companyProfile = {
     {
       id: "bca-certification",
       title: "BCA Certification",
-      summary: "BCA registration presented as a first-line credibility signal in the updated profile.",
+      summary: "BCA registration presented as a first-line credibility signal.",
       image: image("/accreditations/bca-license-workheads.png", "BCA certification and workheads")
     },
     {
@@ -359,7 +359,7 @@ export const companyProfile = {
         "/company-profile/updated/org-overall.png",
         "SGB overall organization chart",
         "Organization Chart - Overall",
-        "The updated deck shows the overall reporting structure, safety roles and installer bench."
+        "Overall reporting structure, safety roles and installer bench."
       ),
       gallery(
         "/company-profile/updated/team-jw2.png",
@@ -383,7 +383,7 @@ export const companyProfile = {
   },
   quality: {
     intro:
-      "The updated profile shows procurement quality checks, testing procedures, and equipment readiness as part of SGB's delivery discipline rather than a separate afterthought.",
+      "Procurement quality checks, testing procedures, and equipment readiness are presented as part of SGB's delivery discipline rather than a separate afterthought.",
     processVisuals: [
       gallery(
         "/company-profile/updated/quality-flow.png",
@@ -395,7 +395,7 @@ export const companyProfile = {
         "/company-profile/quality/slide-18-testing-procedure-1-01.jpeg",
         "Fluke cable analyzer testing procedure",
         "Testing Procedure - Fluke Cable Analyzer DSX5000",
-        "Cable testing workflow retained in the updated deck."
+        "Cable testing workflow for verification and records."
       ),
       gallery(
         "/company-profile/quality/slide-23-testing-procedure-3-02.png",
@@ -451,7 +451,7 @@ export const companyProfile = {
       id: "metal-works-cable-trunking-tray-installation",
       title: "Metal Works - Cable Trunking & Tray Installation",
       summary: "Fabrication and installation support for route preparation, containment and cable support systems.",
-      images: [image("/company-profile/updated/service-cable-trunking.png", "Cable trunking and tray installation work")]
+      images: [image("/company-profile/updated/service-metal-tray-installation.png", "Metal works cable trunking and tray installation")]
     },
     {
       id: "metal-works-equipment-device-installation",
@@ -629,9 +629,9 @@ export const companyProfile = {
     homeDescription:
       "Client-facing pitch website for SGB Engineering & Trading, covering live project references, certifications, manpower deployment, service scope and QA readiness.",
     aboutDescription:
-      "Company overview, client list, manpower capacity and updated team charts for SGB Engineering & Trading.",
+      "Company overview, client list, manpower capacity and team charts for SGB Engineering & Trading.",
     servicesDescription:
-      "Updated service scope for SGB Engineering & Trading across metal works, equipment installation, communications systems, terminations and labelling.",
+      "Service scope for SGB Engineering & Trading across metal works, equipment installation, communications systems, terminations and labelling.",
     projectsDescription:
       "Ongoing, upcoming, recently completed and archive project references for SGB Engineering & Trading.",
     certificationsDescription:
@@ -645,5 +645,5 @@ export const companyProfileSource = {
   sourceFileName: "SGB PROFILE Updated.pdf",
   sourceRelativePath: "c:/Users/siamu/Downloads/SGB PROFILE Updated.pdf",
   importedAt: "2026-03-17T14:56:59+08:00",
-  note: "Content updated from the PDF provided by the user and selected visuals extracted through a local Word conversion."
+  note: "Content refreshed from the PDF provided by the user and selected visuals extracted through a local Word conversion."
 };

@@ -31,7 +31,7 @@ export default function CertificationsPage() {
           <SectionHeading
             eyebrow="Certifications"
             title="Certification and compliance highlights"
-            description="The updated profile positions BCA certification, ISO 9001, ISO 45001 and bizSAFE STAR as first-line trust signals for buyer review."
+            description="BCA certification, ISO 9001, ISO 45001 and bizSAFE STAR are positioned as first-line trust signals for buyer review."
           />
           <p className="mt-5 rounded-md border border-slate-200 bg-white p-3 text-sm text-muted-foreground">
             Contact the team for the latest supporting files where tender documentation requires it.
