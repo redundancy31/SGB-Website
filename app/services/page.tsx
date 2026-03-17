@@ -31,12 +31,26 @@ export default function ServicesPage() {
         <div className="container-shell grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {companyProfile.services.map((service) => (
             <article key={service.id} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft">
-              <ImagePlaceholder
-                src={service.images[0]?.outputPath ?? ""}
-                alt={service.images[0]?.altText ?? service.title}
-                className="h-56 w-full rounded-none object-cover"
-                label={service.title}
-              />
+              {service.images.length > 1 ? (
+                <div className="grid h-56 grid-cols-2 gap-1 overflow-hidden bg-slate-50 p-1">
+                  {service.images.slice(0, 4).map((item) => (
+                    <ImagePlaceholder
+                      key={`${service.id}-${item.outputPath}`}
+                      src={item.outputPath}
+                      alt={item.altText}
+                      className="h-full w-full rounded-none object-cover"
+                      label={service.title}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <ImagePlaceholder
+                  src={service.images[0]?.outputPath ?? ""}
+                  alt={service.images[0]?.altText ?? service.title}
+                  className="h-56 w-full rounded-none object-cover"
+                  label={service.title}
+                />
+              )}
               <div className="p-5">
                 <h2 className="text-base font-semibold text-primary">{service.title}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.summary}</p>

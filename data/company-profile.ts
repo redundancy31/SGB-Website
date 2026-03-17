@@ -451,7 +451,12 @@ export const companyProfile = {
       id: "metal-works-cable-trunking-tray-installation",
       title: "Metal Works - Cable Trunking & Tray Installation",
       summary: "Fabrication and installation support for route preparation, containment and cable support systems.",
-      images: [image("/company-profile/updated/service-metal-tray-installation.png", "Metal works cable trunking and tray installation")]
+      images: [
+        image("/company-profile/updated/service-metal-tray-run.png", "Metal works cable trunking and tray installation run"),
+        image("/company-profile/updated/service-metal-tray-risers.png", "Metal works vertical trunking risers"),
+        image("/company-profile/updated/service-metal-tray-overhead.png", "Metal works overhead tray installation"),
+        image("/company-profile/updated/service-metal-tray-routing.png", "Metal works cable routing and tray installation")
+      ]
     },
     {
       id: "metal-works-equipment-device-installation",
