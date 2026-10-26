@@ -26,6 +26,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <Link href="/worker-login" className="hidden sm:inline-flex">
+            <Button size="sm" variant="outline">Worker Login</Button>
+          </Link>
           <Link href="/contact" className="hidden md:inline-flex">
             <Button size="sm">Request a Consultation</Button>
           </Link>
