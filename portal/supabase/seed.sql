@@ -1,0 +1,1 @@
+-- Synthetic local fixtures are created by pgTAP tests, not by app startup.

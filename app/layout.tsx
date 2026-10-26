@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
 import type { ReactNode } from "react";
 
 import "./globals.css";
@@ -8,12 +7,6 @@ import { companyProfile } from "@/data/company-profile";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap"
-});
 
 const siteUrl = "https://www.sgbengineering.sg";
 
@@ -46,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" className={manrope.variable}>
+    <html lang="en">
       <body className="min-h-screen bg-background text-foreground antialiased">
         <SiteHeader />
         <main>{children}</main>

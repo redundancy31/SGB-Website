@@ -78,6 +78,7 @@ If files are missing, UI renders graceful placeholder blocks automatically.
 - `/safety-quality`
 - `/careers`
 - `/contact`
+- `/worker-login` (information page; portal authentication is not yet available)
 - `/privacy-policy`
 - `/terms`
 
@@ -105,3 +106,7 @@ If files are missing, UI renders graceful placeholder blocks automatically.
 - Contact and careers forms are frontend-only placeholders.
 - Contact form has client-side validation and success state.
 - No backend submission is connected yet.
+
+## Employee portal assessment
+
+The independently deployable invitation-only portal app is in [`portal/`](portal/README.md), with architecture and security notes under [`docs/portal/`](docs/portal/architecture.md). It uses a separate Next.js app and Supabase Auth/PostgreSQL. The Worker Login page on this marketing site is informational only and does not accept credentials. Portal functions and integrations still require local/hosted Supabase configuration and review before real employee use.
